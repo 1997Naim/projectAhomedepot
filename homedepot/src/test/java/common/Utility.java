@@ -23,6 +23,7 @@ public class Utility {
 
   @AfterMethod
   public void afterMethod() {
+	  driver.close();
   }
 
 }
