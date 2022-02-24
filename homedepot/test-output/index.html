@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-adhoc" class="navigator-link">
-              <span class="suite-name border-passed">adhoc</span>
+              <span class="suite-name border-skipped">adhoc</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-adhoc" class="hide-methods passed suite-adhoc"> (hide)</a> <!-- hide-methods passed suite-adhoc -->
-                      <a href="#" panel-name="suite-adhoc" class="show-methods passed suite-adhoc"> (show)</a> <!-- show-methods passed suite-adhoc -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-adhoc" class="hide-methods skipped suite-adhoc"> (hide)</a> <!-- hide-methods skipped suite-adhoc -->
+                      <a href="#" panel-name="suite-adhoc" class="show-methods skipped suite-adhoc"> (show)</a> <!-- show-methods skipped suite-adhoc -->
                     </span>
-                    <div class="method-list-content passed suite-adhoc">
+                    <div class="method-list-content skipped suite-adhoc">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-adhoc" title="bootcamp2022.mavenproject.homedepottest" class="method navigator-link" hash-for-method="f">f</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-adhoc -->
+                    </div> <!-- method-list-content skipped suite-adhoc -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-adhoc" class="panel adhoc">
-          <div class="suite-adhoc-class-passed">
+          <div class="suite-adhoc-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">bootcamp2022.mavenproject.homedepottest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,10 +130,65 @@
                   <a name="f">
                   </a> <!-- f -->
                   <span class="method-name">f</span>
+                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: session not created: This version of ChromeDriver only supports Chrome version 96
+Current browser version is 98.0.4758.102 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;NAIMCHOWDHURY-P&apos;, ip: &apos;10.0.0.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x01186903+2517251]
+	Ordinal0 [0x0111F8E1+2095329]
+	Ordinal0 [0x01022848+1058888]
+	Ordinal0 [0x01040B9D+1182621]
+	Ordinal0 [0x0103CA60+1165920]
+	Ordinal0 [0x0103A2CF+1155791]
+	Ordinal0 [0x0106AAAF+1354415]
+	Ordinal0 [0x0106A71A+1353498]
+	Ordinal0 [0x0106639B+1336219]
+	Ordinal0 [0x010427A7+1189799]
+	Ordinal0 [0x01043609+1193481]
+	GetHandleVerifier [0x01315904+1577972]
+	GetHandleVerifier [0x013C0B97+2279047]
+	GetHandleVerifier [0x01216D09+534521]
+	GetHandleVerifier [0x01215DB9+530601]
+	Ordinal0 [0x01124FF9+2117625]
+	Ordinal0 [0x011298A8+2136232]
+	Ordinal0 [0x011299E2+2136546]
+	Ordinal0 [0x01133541+2176321]
+	BaseThreadInitThunk [0x75C66739+25]
+	RtlGetFullPathName_UEx [0x77D18E7F+1215]
+	RtlGetFullPathName_UEx [0x77D18E4D+1165]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1002)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at common.Utility.beforeMethod(Utility.java:17)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-adhoc-class-passed -->
+          </div> <!-- suite-adhoc-class-skipped -->
         </div> <!-- panel adhoc -->
         <div panel-name="test-xml-adhoc" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -190,12 +245,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'f')
 data.setCell(0, 2, 'bootcamp2022.mavenproject.homedepottest')
-data.setCell(0, 3, 4530);
+data.setCell(0, 3, 0);
 window.suiteTableData['adhoc']= { tableData: data, tableDiv: 'times-div-adhoc'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-adhoc">
               </div> <!-- times-div-adhoc -->
             </div> <!-- times-div -->
@@ -223,16 +278,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">bootcamp2022.mavenproject.homedepottest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">beforeMethod</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">f</span>
-                <span class="method-start">3906 ms</span>
+                <span class="method-start">1169 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">8437 ms</span>
+                <span class="method-start">1173 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
